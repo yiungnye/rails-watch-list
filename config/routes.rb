@@ -8,6 +8,11 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'lists#index'
 
-  resources :lists # , except: [:index]
-  resources :movies, only: [:index]
+  resources :lists do
+    resources :bookmarks do
+      resources :movies
+    end
+  end
+
+  resources :bookmarks, only: [:destroy]
 end
