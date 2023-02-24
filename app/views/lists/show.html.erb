@@ -1,2 +1,24 @@
-<h1><%= @list.name %></h1>
+<div class="navbar">
+  <div class="logo">
+    <%= image_tag "logo.png", alt: "Le Wagon Logo", width: 30 %>
+  </div>
+  <p><%= link_to 'New List', new_list_path %></p>
+</div>
+<div class="hero">
+  <p><%= @list.name %></p>
+</div>
+
+
 <p><%= link_to 'Bookmark a Film', new_list_bookmark_path(@list) %></p>
+
+<div class="cardx">
+  <p><%= image_tag @movie.poster_url, class: "poster" %></p>
+  <div class="card-context">
+      <p><%= @movie.title %> <span><%= @movie.rating %></span> </p>
+      <p><%= @movie.overview %></p>
+    <div class="bottom">
+      <p><%= @bookmark.comment %></p>
+      <p><%= link_to 'Delete' %></p>
+    </div>
+  </div>
+</div>

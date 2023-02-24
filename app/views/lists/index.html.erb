@@ -1,8 +1,12 @@
-<h1>Lists of Movies</h1>
-<!--<p><%= link_to 'My Lists', root_path %></p>-->
-<p><%= link_to 'New List', new_list_path %></p>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<%= render "layouts/navbar" %>
+<div class="container">
+  <div class="my-list">
+  <h3>My List</h3>
+  <p class="btn"><%= link_to 'Create a movie list' %></p>
+  </div>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+</div>
