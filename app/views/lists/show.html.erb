@@ -2,21 +2,14 @@
   <div class="logo">
     <%= image_tag "logo.png", alt: "Le Wagon Logo", width: 30 %>
   </div>
-  <p><%= link_to 'New List', new_list_path %></p>
+  <p><%= link_to 'Bookmark a Film', new_list_bookmark_path(@list) %></p>
 </div>
 <div class="hero">
   <p><%= @list.name %></p>
 </div>
 
-<%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
-      width: 400, height: 300, crop: :fill) %>
-
-<%= cl_image_tag("development/q1w6qu9uieo34v81lpzyv9jwmpnk.jpg") %>
-
-<p><%= link_to 'Bookmark a Film', new_list_bookmark_path(@list) %></p>
-
 <div class="cardx">
-  <p><%= image_tag @movie.poster_url, class: "poster" %></p>
+  <div class="img-bg"></div>
   <div class="card-context">
       <p><%= @movie.title %> <span><%= @movie.rating %></span> </p>
       <p><%= @movie.overview %></p>

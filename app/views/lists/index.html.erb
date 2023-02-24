@@ -3,6 +3,7 @@
   <div class="my-list">
   <h3>My List</h3>
   <p class="btn"><%= link_to 'Create a movie list' %></p>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
   <ul>
     <% @lists.each do |list| %>

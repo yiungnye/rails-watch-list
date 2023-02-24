@@ -2,6 +2,11 @@
   width: 350px;
   height: 450px;
   box-shadow: 10px 10px;
+  .img-bg {
+    height: 200px;
+    widows: 50px;
+    background-image: url('<%= cl_image_path "sample" %>');
+  }
   .card-context {
     padding: 20px;
   }
